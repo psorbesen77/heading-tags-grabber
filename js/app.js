@@ -23,6 +23,9 @@ function grabHeader () {
         .then(response => response.text())
         // Process the HTML content 
         .then(html => {
+
+        
+            console.log("HTML content:", html);
             const parser = new DOMParser();
             // Parse the HTML content into a DOM document 
             const doc = parser.parseFromString(html, "text/html");
